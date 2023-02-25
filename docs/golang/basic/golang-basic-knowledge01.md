@@ -23,15 +23,22 @@ Go语言支持以下系统
 
 各个系统对应的文件名称：
 
-![image-20230224215227232](https://raw.githubusercontent.com/ThreadNew/GoNotes/blob/master/docs/golang/basic/image/image-20230224215227232.png)
+![image-20230224215227232](./image/image-20230224215227232.png)
 
 **Windows下安装**
 
-待整理
+- 打开你下载的MSI文件并按照提示安装Go
+- 进入cmd窗口、输入下面命令确定是否安装成功
+
+```shell
+go version
+```
+
+
 
 **macOS下安装**
 
-​	**通过brew 安装**
+- **通过brew 安装**
 
 ```shell
 brew install go
@@ -39,11 +46,11 @@ brew install go
 brew install golang
 ```
 
-​	**官网下载pkg包来安装**
+- **官网下载pkg包来安装**
 
 打开下载的pkg包文件，按照提示安装go即可
 
-​	**验证**
+-  **验证**
 
 ```shell
 \W $ go version
@@ -53,9 +60,35 @@ go version go1.20.1 darwin/amd64
 
 **Linux下安装**
 
-待整理
+- 下载安装包，执行下面的命令
+
+```shell
+ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.1.linux-amd64.tar.gz
+```
+
+- 将 /usr/local/go/bin 添加到`PATH`环境变量中
+
+```shell
+export PATH=$PATH:/usr/local/go/bin
+```
+
+- 通过source命令让配置生效
+
+```shell
+source /etc/profile
+```
+
+- 验证是否安装成功
+
+```
+ go version
+```
+
+
 
 **推荐开发工具**：[GoLand 工具下载](https://www.jetbrains.com/go/download/#section=mac)
+
+
 
 ### 开始一个Go程序：hello，world！
 
@@ -141,7 +174,7 @@ hello,world!
 
 **变量名规范：** 由字母、数字、下划线组成，其中首字母不能以数字开头。
 
-**变量名命名建议：**驼峰命名 （骆峰式命名法就是当变量名或函式名是由一个或多个单字连结在一起，而构成的唯一识别字时，第一个单词以小写字母开始；第二个单词的首字母大写或每一个单词的首字母都采用大写字母!    例如：variableOne、learnGo）
+**变量名命名建议：** 驼峰命名 （骆峰式命名法就是当变量名或函式名是由一个或多个单字连结在一起，而构成的唯一识别字时，第一个单词以小写字母开始；第二个单词的首字母大写或每一个单词的首字母都采用大写字母!    例如：variableOne、learnGo）
 
 
 
@@ -176,7 +209,7 @@ var (
 
 ### 常量 和 iota
 
-**常量定义：**常量使用关键字const定义，用于存储不会改变的数据
+**常量定义：** 常量使用关键字const定义，用于存储不会改变的数据
 
 **常量声明规则：** 
 
@@ -254,17 +287,17 @@ result: a=0,b=1,c=2
 
 #### 局部变量
 
-**定义：**在函数体内声明的变量
+**定义：**  在函数体内声明的变量
 
-**作用域：**只在函数体内，参数和返回值也是局部变量
+**作用域：**  只在函数体内，参数和返回值也是局部变量
 
 
 
 #### 全局变量
 
-**定义：**在函数外声明的变量
+**定义：** 在函数外声明的变量
 
-**作用域：**全局的，可以在整个包甚至外部包（被导出后）使用。包的概念后面介绍
+**作用域：** 全局的，可以在整个包甚至外部包（被导出后）使用。包的概念后面介绍
 
 #### 注意
 
