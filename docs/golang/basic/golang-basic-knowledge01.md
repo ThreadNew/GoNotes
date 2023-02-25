@@ -630,3 +630,165 @@ func main() {
 
 ```
 
+- **switch 语句**
+
+switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上至下逐一测试，直到匹配为止。
+
+```go
+swicth varV {
+  case varV1:
+  case varV2:
+  case VarV3:
+  default:
+  
+}
+```
+
+其中varV 可以是任何类型，case的类型要与varV保持一致
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := 2
+	switch a {
+	case 1:
+		fmt.Println(1)
+	case 2: // 2 满足条件
+		fmt.Println(2)
+	case 3:
+		fmt.Println(3)
+	case 4:
+		fmt.Println(4)
+	default:
+		fmt.Println("default")
+	}
+}
+// 结果输出 2
+```
+
+
+
+**可能满足多个条件中的一个 **
+
+```go
+swicth varV {
+  case varV1,varV2,VarV3:
+  case varV4:
+  default:
+  
+}
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := 2
+	switch a {
+	case 1, 2, 3: // 2满足条件
+		fmt.Println("1，2，3")
+	case 4:
+		fmt.Println(4)
+	default:
+		fmt.Println("default")
+	}
+}
+// 结果输出 1，2，3
+```
+
+
+
+**fallthrough: 执行完当前分支后，还执行后续分支的代码 **
+
+```go
+switch varV{
+  case varV1:
+   fallthrough
+  case varV2:
+  default:
+}
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := 2
+	switch a {
+	case 1:
+		fmt.Println(1)
+		fallthrough
+	case 2:
+		fmt.Println(2)
+		fallthrough
+	case 3:
+		fmt.Println(3)
+	case 4:
+		fmt.Println(4)
+	default:
+		fmt.Println("default")
+	}
+}
+// 结果输出 当a=2时， 输出 2，3
+// 当 a=4 输出 4
+```
+
+#### 循环语句
+
+##### for 结构
+
+```go
+for init; condition; post { }
+for condition { }
+for { } //自旋 
+```
+
+- init： 一般为赋值表达式，给控制变量赋初值；
+- condition： 关系表达式或逻辑表达式，循环控制条件；
+- post： 一般为赋值表达式，给控制变量增量或减量。
+
+**结束循环**
+
+- continue 结束本次循环
+- break 跳出循环体
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	for i := 0; i < 4; i++ {
+		fmt.Print(i)
+		if i == 3 {
+			fmt.Printf("continue i=%v", i)
+			continue
+		}
+	} // 0 1 2 3 continue i=3
+	a := 2
+	for a > 4 {
+		fmt.Printf(" for condition a=%v", a)
+
+	} // 无
+	for {
+		a++
+		if a == 4 {
+			fmt.Printf("break i=%v", a)
+			break
+		}
+		fmt.Printf("for 自旋 a=%v", a)
+	} // for 自旋 a=3 break i=4
+
+}
+
+```
+
+
+
