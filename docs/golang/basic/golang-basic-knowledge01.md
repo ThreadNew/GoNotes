@@ -23,7 +23,7 @@ Go语言支持以下系统
 
 各个系统对应的文件名称：
 
-![image-20230224215227232](https://github.com/ThreadNew/GoNotes/blob/master/docs/golang/basic/image/image-20230224215227232.png)
+![image-20230224215227232](https://raw.githubusercontent.com/ThreadNew/GoNotes/blob/master/docs/golang/basic/image/image-20230224215227232.png)
 
 **Windows下安装**
 
