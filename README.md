@@ -13,3 +13,7 @@
 [**Go快速入门（二）**](docs/golang/basic/golang-basic-knowledge02.md)
 
 [**Go快速入门（三）**](docs/golang/basic/golang-basic-knowledge03.md)
+
+### 死磕源码系列
+
+[「死磕源码系列之ants协程池」高性能协程池ants源码剖析](docs/golang/source-code-analysis/ants.md)
