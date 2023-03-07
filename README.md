@@ -20,5 +20,5 @@
 
 ### 动手实践系列
 
-[「动手实践系列之自旋锁设计」如何用Go优雅的实现高性能自旋锁](docs/golang/hands/spinloc.md)
+[「动手实践系列之自旋锁设计」如何用Go优雅的实现高性能自旋锁](docs/golang/hands/spinlock.md)
 
