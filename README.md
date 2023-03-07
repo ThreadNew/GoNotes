@@ -17,3 +17,8 @@
 ### 死磕源码系列
 
 [「死磕源码系列之ants协程池」高性能协程池ants源码剖析](docs/golang/source-code-analysis/ants.md)
+
+### 动手实践系列
+
+[「动手实践系列之自旋锁设计」如何用Go优雅的实现高性能自旋锁](docs/golang/hands/spinloc.md)
+
